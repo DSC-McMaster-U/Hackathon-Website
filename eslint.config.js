@@ -1,34 +1,48 @@
 import js from "@eslint/js";
-import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
+import react from "eslint-plugin-react";
 import { ESLint } from "eslint";
+import typescriptParser from "@typescript-eslint/parser";
 
 // Define the ESLint configuration
 const eslintConfig = {
-	ignores: ["dist"],
+	ignorePatterns: [
+		"dist", // Build output directory
+		"node_modules", // Node modules
+		"coverage", // Test coverage reports
+		"vite.config.ts", // Vite configuration file (if you have one)
+		"*.config.js", // Configuration files that might not need linting
+	],
 	extends: [
 		js.configs.recommended,
-		"@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
 		"prettier",
 	],
-	files: ["**/*.{ts,tsx}"],
-	languageOptions: {
+	parser: typescriptParser,
+	parserOptions: {
 		ecmaVersion: 2020,
-		globals: globals.browser,
-		parser: "@typescript-eslint/parser",
+		sourceType: "module",
+		ecmaFeatures: {
+			jsx: true,
+		},
 	},
-	plugins: {
-		"react-hooks": reactHooks,
-		"react-refresh": reactRefresh,
-		"@typescript-eslint": "@typescript-eslint/eslint-plugin",
+	plugins: ["react", "react-hooks", "@typescript-eslint"],
+	settings: {
+		react: {
+			version: "detect",
+		},
 	},
 	rules: {
+		...react.configs.recommended.rules,
 		...reactHooks.configs.recommended.rules,
 		"react-refresh/only-export-components": [
 			"warn",
 			{ allowConstantExport: true },
 		],
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+		"react/react-in-jsx-scope": "off",
 	},
 };
 
