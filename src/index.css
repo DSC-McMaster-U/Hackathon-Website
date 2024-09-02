@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,4 +10,26 @@ html {
 
 body {
 	@apply text-googleBlack;
+	@apply bg-googleWhite;
+	font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+	@apply text-7xl font-bold;
+}
+
+h2 {
+	@apply text-5xl font-bold;
+}
+
+h3 {
+	@apply text-2xl font-bold;
+}
+
+h4 {
+	@apply text-xl font-bold;
+}
+
+p {
+	@apply text-base;
 }

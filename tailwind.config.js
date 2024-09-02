@@ -19,6 +19,7 @@ export default {
 				googleLightGrey: "#F1F3F4",
 				googleGrey: "#9AA0A6",
 				googleBlack: "#202124",
+				googleWhite: "#FFFFFF",
 			},
 		},
 	},
