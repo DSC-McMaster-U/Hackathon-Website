@@ -17,7 +17,7 @@ const Footer = () => {
 	return (
 		<footer
 			id="footer"
-			className="flex flex-row justify-between items-start bg-googleGrey border border-googleGrey bg-opacity-10 w-full px-32 py-16 gap-y-8 h-auto"
+			className="flex flex-col md:flex-row justify-between items-start bg-googleGrey border border-opacity-10 border-googleGrey bg-opacity-10 w-full px-4 md:px-20 lg:px-32 py-16 gap-y-8 h-auto"
 		>
 			<div
 				id="info"
@@ -78,6 +78,7 @@ const Footer = () => {
 					>
 						{resources.map((section) => (
 							<a
+								key={section.href}
 								href={section.href}
 								className="whitespace-nowrap cursor-pointer border-b-2 border-transparent hover:border-b-2 hover:border-googleGrey transition-all duration-200"
 							>

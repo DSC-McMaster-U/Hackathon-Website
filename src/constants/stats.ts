@@ -4,11 +4,11 @@ export const stats = [
 		title: "Attendees",
 	},
 	{
-		number: 800,
-		title: "Attendees",
+		number: 200,
+		title: "Projects",
 	},
 	{
-		number: 800,
-		title: "Attendees",
+		number: 55,
+		title: "Mentors",
 	},
 ];
