@@ -11,7 +11,7 @@ export const socialMedia = [
 	},
 	{
 		name: "LinkedIn",
-		url: "https://www.instagram.com/gdscmcmasteru/",
+		url: "https://www.linkedin.com/company/gdscmcmasteru/",
 		icon: "SiLinkedin",
 	},
 ];
