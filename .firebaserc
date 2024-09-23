@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "dsc-mcmaster-u-website"
+  },
+  "targets": {
+    "dsc-mcmaster-u-website": {
+      "hosting": {
+        "solutionchallenge": [
+          "mcmasterusolutionchallenge"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
