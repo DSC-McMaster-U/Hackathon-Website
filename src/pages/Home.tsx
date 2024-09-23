@@ -18,7 +18,7 @@ const Hero = () => {
 				id="hero-content"
 				className="flex flex-col gap-y-4 md:gap-y-8 w-full justify-center items-start h-full"
 			>
-				<p>— McMaster's annual Google hackathon</p>
+				<p>— McMaster's Annual Google Hackathon</p>
 				<h1>McMaster Google Solution Challenge</h1>
 			</div>
 			<img
